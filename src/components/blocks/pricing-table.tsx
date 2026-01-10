@@ -10,6 +10,11 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { type Language } from "@/i18n";
+
+interface PricingTableProps {
+  lang?: Language;
+}
 
 interface FeatureSection {
   category: string;
@@ -160,7 +165,7 @@ const renderFeatureValue = (value: true | false | null | string) => {
   );
 };
 
-export const PricingTable = () => {
+export const PricingTable = ({ lang = "en" }: PricingTableProps) => {
   const [selectedPlan, setSelectedPlan] = useState(1); // Default to Startup plan
 
   return (

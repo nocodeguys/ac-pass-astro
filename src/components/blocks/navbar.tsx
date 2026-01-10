@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import { ChevronRight, ShoppingCart } from "lucide-react";
 
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,46 +14,59 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { GITHUB_URL } from "@/consts";
+import { type Language, useTranslations, getLocalizedPath } from "@/i18n";
 import { cn } from "@/lib/utils";
 
-const ITEMS = [
-  {
-    label: "Features",
-    href: "#features",
-    dropdownItems: [
-      {
-        title: "Stack-First Architecture",
-        href: "/#feature-modern-teams",
-        description:
-          "Multiple purchases automatically extend access periods with no overlapping subscriptions",
-      },
-      {
-        title: "Access Management",
-        href: "/#resource-allocation",
-        description: "Everything you need to manage time-based access for your products",
-      },
-    ],
-  },
-  { label: "About Us", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
-];
+interface NavbarProps {
+  lang?: Language;
+}
 
-export const Navbar = () => {
+export const Navbar = ({ lang = "en" }: NavbarProps) => {
+  const t = useTranslations(lang);
+
+  const ITEMS = [
+    {
+      label: t("nav.features"),
+      href: getLocalizedPath("#features", lang),
+      dropdownItems: [
+        {
+          title: t("nav.dropdownItems.stackFirst.title"),
+          href: getLocalizedPath("/#feature-modern-teams", lang),
+          description: t("nav.dropdownItems.stackFirst.description"),
+        },
+        {
+          title: t("nav.dropdownItems.accessManagement.title"),
+          href: getLocalizedPath("/#resource-allocation", lang),
+          description: t("nav.dropdownItems.accessManagement.description"),
+        },
+      ],
+    },
+    { label: t("nav.aboutUs"), href: getLocalizedPath("/about", lang) },
+    { label: t("nav.pricing"), href: getLocalizedPath("/pricing", lang) },
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [pathname, setPathname] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setPathname(window.location.pathname);
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
-        "top-5 lg:top-12",
+        "fixed left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border transition-all duration-300",
+        isScrolled
+          ? "bg-background/80 border-border/50 top-3 scale-[0.98] shadow-lg backdrop-blur-xl lg:top-6"
+          : "bg-background/60 border-border/30 top-5 backdrop-blur-md lg:top-12",
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
@@ -72,26 +86,26 @@ export const Navbar = () => {
             {ITEMS.map((link) =>
               link.dropdownItems ? (
                 <NavigationMenuItem key={link.label} className="">
-                  <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
+                  <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent px-1.5">
                     {link.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="w-[400px] space-y-2 p-4">
+                    <ul className="grid w-[400px] gap-3 p-4">
                       {link.dropdownItems.map((item) => (
                         <li key={item.title}>
-                          <a
-                            href={item.href}
-                            className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none"
-                          >
-                            <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={item.href}
+                              className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
+                            >
                               <div className="text-sm leading-none font-medium">
                                 {item.title}
                               </div>
                               <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
                                 {item.description}
                               </p>
-                            </div>
-                          </a>
+                            </a>
+                          </NavigationMenuLink>
                         </li>
                       ))}
                     </ul>
@@ -116,10 +130,11 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
+          <LanguageSwitcher lang={lang} />
           <ThemeToggle />
-          <a href="/login" className="max-lg:hidden">
+          <a href={GITHUB_URL} className="max-lg:hidden">
             <Button variant="outline">
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">{lang === "pl" ? "Kup" : "Buy"}</span>
             </Button>
           </a>
           <a
@@ -127,7 +142,7 @@ export const Navbar = () => {
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <ShoppingCart className="size-4" />
-            <span className="sr-only">Get Access Passes</span>
+            <span className="sr-only">{t("nav.getAccessPasses")}</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}
@@ -135,7 +150,7 @@ export const Navbar = () => {
             className="text-muted-foreground relative flex size-8 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">{t("nav.openMainMenu")}</span>
             <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"

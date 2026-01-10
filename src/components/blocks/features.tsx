@@ -3,23 +3,29 @@ import { ChevronRight } from "lucide-react";
 import { DashedLine } from "../dashed-line";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { type Language, useTranslations } from "@/i18n";
 
-const items = [
-  {
-    title: "Stack-First Architecture",
-    image: "/features/triage-card.svg",
-  },
-  {
-    title: "Flexible Access Groups",
-    image: "/features/cycle-card.svg",
-  },
-  {
-    title: "Developer-Friendly API",
-    image: "/features/overview-card.svg",
-  },
-];
+interface FeaturesProps {
+  lang?: Language;
+}
 
-export const Features = () => {
+export const Features = ({ lang = "en" }: FeaturesProps) => {
+  const t = useTranslations(lang);
+
+  const items = [
+    {
+      title: t("features.items.stackFirst"),
+      image: "/features/triage-card.svg",
+    },
+    {
+      title: t("features.items.flexibleGroups"),
+      image: "/features/cycle-card.svg",
+    },
+    {
+      title: t("features.items.developerApi"),
+      image: "/features/overview-card.svg",
+    },
+  ];
   return (
     <section id="feature-modern-teams" className="pb-28 lg:pb-32">
       <div className="container">
@@ -27,17 +33,17 @@ export const Features = () => {
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            SIMPLICITY OVER COMPLEXITY
+            {t("features.tagline")}
           </span>
         </div>
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Built for Digital Product Sellers
+            {t("features.title")}
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Access Passes uses simple one-time purchases that grant time-based access. Perfect for courses, digital products, memberships, and software licenses — without the complexity of recurring billing.
+            {t("features.description")}
           </p>
         </div>
 

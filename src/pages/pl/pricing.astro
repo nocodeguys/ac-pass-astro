@@ -1,17 +1,17 @@
 ---
 import { getSiteMetadata } from '@/consts';
-import { getLangFromUrl } from '@/i18n';
 
 import { Background } from '@/components/background';
-import LoginSection from '@/components/blocks/login-section';
+import { Pricing } from '@/components/blocks/pricing';
+import { PricingTable } from '@/components/blocks/pricing-table';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = 'pl' as const;
 const metadata = getSiteMetadata(lang);
 ---
-
 <DefaultLayout title={metadata.title.default} description={metadata.description} lang={lang}>
   <Background>
-    <LoginSection lang={lang} />
+    <Pricing client:only='react' className="py-28 text-center lg:pt-44 lg:pb-32" lang={lang} />
+    <PricingTable lang={lang} />
   </Background>
 </DefaultLayout>

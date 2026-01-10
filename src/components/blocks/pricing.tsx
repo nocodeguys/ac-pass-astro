@@ -7,53 +7,60 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
+import { type Language, useTranslations } from "@/i18n";
 import { cn } from "@/lib/utils";
 
-const plans = [
-  {
-    name: "Single Site",
-    monthlyPrice: "$79",
-    yearlyPrice: "$49",
-    description: "Perfect for one store",
-    features: [
-      "1 site license",
-      "All plugin features",
-      "1 year of updates",
-      "Priority email support",
-      "Access Groups & Stacking",
-      "REST API & Webhooks",
-    ],
-  },
-  {
-    name: "5 Sites",
-    monthlyPrice: "$149",
-    yearlyPrice: "$99",
-    features: [
-      "5 site licenses",
-      "All plugin features",
-      "1 year of updates",
-      "Priority email support",
-      "Access Groups & Stacking",
-      "REST API & Webhooks",
-    ],
-  },
-  {
-    name: "Unlimited",
-    monthlyPrice: "$299",
-    yearlyPrice: "$199",
-    features: [
-      "Unlimited site licenses",
-      "All plugin features",
-      "1 year of updates",
-      "Priority email support",
-      "Access Groups & Stacking",
-      "REST API & Webhooks",
-      "White-label option",
-    ],
-  },
-];
+interface PricingProps {
+  className?: string;
+  lang?: Language;
+}
 
-export const Pricing = ({ className }: { className?: string }) => {
+export const Pricing = ({ className, lang = "en" }: PricingProps) => {
+  const t = useTranslations(lang);
+
+  const plans = [
+    {
+      name: t("pricing.plans.singleSite.name"),
+      monthlyPrice: "$79",
+      yearlyPrice: "$49",
+      description: t("pricing.plans.singleSite.description"),
+      features: [
+        t("pricing.features.siteLicense1"),
+        t("pricing.features.allFeatures"),
+        t("pricing.features.yearUpdates"),
+        t("pricing.features.prioritySupport"),
+        t("pricing.features.accessGroups"),
+        t("pricing.features.restApi"),
+      ],
+    },
+    {
+      name: t("pricing.plans.fiveSites.name"),
+      monthlyPrice: "$149",
+      yearlyPrice: "$99",
+      features: [
+        t("pricing.features.siteLicense5"),
+        t("pricing.features.allFeatures"),
+        t("pricing.features.yearUpdates"),
+        t("pricing.features.prioritySupport"),
+        t("pricing.features.accessGroups"),
+        t("pricing.features.restApi"),
+      ],
+    },
+    {
+      name: t("pricing.plans.unlimited.name"),
+      monthlyPrice: "$299",
+      yearlyPrice: "$199",
+      features: [
+        t("pricing.features.siteLicenseUnlimited"),
+        t("pricing.features.allFeatures"),
+        t("pricing.features.yearUpdates"),
+        t("pricing.features.prioritySupport"),
+        t("pricing.features.accessGroups"),
+        t("pricing.features.restApi"),
+        t("pricing.features.whiteLabel"),
+      ],
+    },
+  ];
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
@@ -61,10 +68,10 @@ export const Pricing = ({ className }: { className?: string }) => {
       <div className="container max-w-5xl">
         <div className="space-y-4 text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Simple, Transparent Pricing
+            {t("pricing.title")}
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            One license per site. All features included. No recurring fees — just one-time purchases like your customers enjoy.
+            {t("pricing.description")}
           </p>
         </div>
 
@@ -85,7 +92,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                     <div className="text-muted-foreground text-lg font-medium">
                       {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}
                       <span className="text-muted-foreground text-sm">
-                        one-time
+                        {t("pricing.oneTime")}
                       </span>
                     </div>
                   </div>
@@ -102,7 +109,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                       onCheckedChange={() => setIsAnnual(!isAnnual)}
                       aria-label="Toggle annual billing"
                     />
-                    <span className="text-sm font-medium">Launch pricing</span>
+                    <span className="text-sm font-medium">{t("pricing.launchPricing")}</span>
                   </div>
                 )}
 
@@ -120,9 +127,9 @@ export const Pricing = ({ className }: { className?: string }) => {
 
                 <Button
                   className="w-fit"
-                  variant={plan.name === "5 Sites" ? "default" : "outline"}
+                  variant={plan.name === t("pricing.plans.fiveSites.name") ? "default" : "outline"}
                 >
-                  Get Access Passes
+                  {t("pricing.getAccessPasses")}
                 </Button>
               </CardContent>
             </Card>

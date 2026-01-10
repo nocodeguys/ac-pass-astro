@@ -6,7 +6,14 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Input } from "../ui/input";
 
-const SignupSection = () => {
+import { type Language, useTranslations, getLocalizedPath } from "@/i18n";
+
+interface SignupSectionProps {
+  lang?: Language;
+}
+
+const SignupSection = ({ lang = "en" }: SignupSectionProps) => {
+  const t = useTranslations(lang);
   return (
     <section className="py-28 lg:pt-44 lg:pb-32">
       <div className="container">
@@ -20,37 +27,34 @@ const SignupSection = () => {
                 height={18}
                 className="mb-7 dark:invert"
               />
-              <p className="mb-2 text-2xl font-bold">Start your free trial</p>
+              <p className="mb-2 text-2xl font-bold">{t("signup.createAccount")}</p>
               <p className="text-muted-foreground">
-                Sign up in less than 2 minutes.
+                {t("signup.enterDetails")}
               </p>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
-                <Input type="text" placeholder="Enter your name" required />
-                <Input type="email" placeholder="Enter your email" required />
+                <Input type="text" placeholder={t("signup.namePlaceholder")} required />
+                <Input type="email" placeholder={t("signup.emailPlaceholder")} required />
                 <div>
                   <Input
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder={t("signup.passwordPlaceholder")}
                     required
                   />
-                  <p className="text-muted-foreground mt-1 text-sm">
-                    Must be at least 8 characters.
-                  </p>
                 </div>
                 <Button type="submit" className="mt-2 w-full">
-                  Create an account
+                  {t("signup.signUp")}
                 </Button>
                 <Button variant="outline" className="w-full">
                   <FcGoogle className="mr-2 size-5" />
-                  Sign up with Google
+                  {t("signup.signUpGoogle")}
                 </Button>
               </div>
               <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
-                <p>Already have an account?</p>
-                <a href="/login" className="text-primary font-medium">
-                  Log in
+                <p>{t("signup.haveAccount")}</p>
+                <a href={getLocalizedPath("/login", lang)} className="text-primary font-medium">
+                  {t("signup.logIn")}
                 </a>
               </div>
             </CardContent>

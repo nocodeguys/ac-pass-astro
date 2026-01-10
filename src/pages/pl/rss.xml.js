@@ -1,12 +1,12 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 
-import { getSiteMetadata } from "../consts";
+import { getSiteMetadata } from "../../consts";
 
 export async function GET(context) {
-  const metadata = getSiteMetadata("en");
+  const metadata = getSiteMetadata("pl");
   const posts = (await getCollection("blog")).filter(
-    (post) => post.data.lang === "en" || !post.data.lang
+    (post) => post.data.lang === "pl"
   );
   return rss({
     title: metadata.title.default,
@@ -14,7 +14,7 @@ export async function GET(context) {
     site: context.site,
     items: posts.map((post) => ({
       ...post.data,
-      link: `/blog/${post.id}/`,
+      link: `/pl/blog/${post.id}/`,
     })),
   });
 }

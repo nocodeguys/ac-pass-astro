@@ -4,14 +4,13 @@ import { getCollection } from 'astro:content';
 import { Background } from '@/components/background';
 import { BlogPosts } from '@/components/blocks/blog-posts';
 import { getSiteMetadata } from '@/consts';
-import { getLangFromUrl } from '@/i18n';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = 'pl' as const;
 const metadata = getSiteMetadata(lang);
 
 const posts = (await getCollection('blog'))
-	.filter((post) => post.data.lang === 'en' || !post.data.lang)
+	.filter((post) => post.data.lang === 'pl')
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 

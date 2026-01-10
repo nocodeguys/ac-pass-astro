@@ -1,0 +1,219 @@
+{
+  "site": {
+    "title": "WooCommerce Access Passes | Sprzedawaj Czas i Dostęp bez Subskrypcji",
+    "description": "Przestań walczyć ze skomplikowanymi subskrypcjami. Zamień produkty WooCommerce w sumowalny dostęp czasowy dla kursów, społeczności i produktów cyfrowych.",
+    "shortDescription": "Najprostszy sposób na sprzedaż dostępu czasowego. Sumowalne okresy, zero problemów z płatnościami cyklicznymi i automatyczne zarządzanie społecznością."
+  },
+  "nav": {
+    "features": "Jak to działa",
+    "aboutUs": "Nasza Misja",
+    "pricing": "Cennik",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "login": "Zaloguj się",
+    "getAccessPasses": "Zacznij sprzedawać czas",
+    "openMainMenu": "Otwórz menu główne",
+    "dropdownItems": {
+      "stackFirst": {
+        "title": "Sumowalny Dostęp",
+        "description": "Pozwól klientom przedłużać dostęp poprzez zwykły zakup — bez nakładających się kont i subskrypcji."
+      },
+      "accessManagement": {
+        "title": "Silnik Automatyzacji",
+        "description": "Zautomatyzuj swoją społeczność, upselle i odnowienia dzięki gotowym scenariuszom n8n."
+      }
+    }
+  },
+  "hero": {
+    "title": "Przestań walczyć z subskrypcjami. Zacznij sprzedawać czas.",
+    "description": "Zamień dowolny produkt WooCommerce w dostęp czasowy. Bez skomplikowanych rozliczeń, bez odrzucanych płatności — tylko proste zakupy, które się sumują. Idealne dla kursów, grup Discord i treści premium.",
+    "cta": "Kup Access Passes",
+    "viewDocs": "Zobacz scenariusze n8n",
+    "imageAlt": "Przegląd automatyzacji i panelu WooCommerce Access Passes",
+    "features": {
+      "stackableAccess": {
+        "title": "Sumowalny Czas",
+        "description": "Nowe zakupy automatycznie wydłużają istniejący dostęp. Koniec z bałaganem w subskrypcjach."
+      },
+      "flexibleGroups": {
+        "title": "Grupy Dostępu",
+        "description": "Jedna przepustka może dać dostęp do kursu, forum i biblioteki plików jednocześnie."
+      },
+      "guestFriendly": {
+        "title": "Import w 3 minuty",
+        "description": "Zaimportuj obecne zamówienia WooCommerce lub pliki CSV i natychmiast nadaj dostępy."
+      },
+      "fullApi": {
+        "title": "Biznes na Autopilocie",
+        "description": "Gotowe scenariusze n8n do obsługi maili oraz usuwania użytkowników z Circle i Discorda."
+      }
+    }
+  },
+  "logos": {
+    "title": "Wspieramy nową generację cyfrowych przedsiębiorców.",
+    "subtitle": "Zaufali nam twórcy kursów, liderzy społeczności i pionierzy produktów cyfrowych."
+  },
+  "features": {
+    "tagline": "PROSTOTA PONAD KOMPLEKSOWOŚĆ",
+    "title": "Stworzone dla Sprzedawców Produktów Cyfrowych",
+    "description": "Access Passes zmienia Twój sklep w inteligentny system dystrybucji czasu. Przestań ścigać wygasłe karty kredytowe i daj swoim klientom elastyczność, której potrzebują.",
+    "items": {
+      "stackFirst": "Sumuj czas, a nie problemy",
+      "flexibleGroups": "Jeden klucz do wielu drzwi",
+      "developerApi": "Twój biznes na autopilocie"
+    }
+  },
+  "resourceAllocation": {
+    "title": "Wszystko, czego potrzebujesz, by przestać pilnować zegarka",
+    "items": {
+      "adminDashboard": {
+        "title": "Widzisz wszystko jak na dłoni.",
+        "description": "Koniec z przekopywaniem się przez zamówienia. Jeden rzut oka i wiesz dokładnie, kto jest aktywny, kiedy wygasa i ile dni mu zostało."
+      },
+      "wooIntegration": {
+        "title": "Zero nowych narzędzi do nauki.",
+        "description": "Działa z Twoimi obecnymi produktami i bramkami płatności WooCommerce. Bez zewnętrznych platform i skomplikowanej konfiguracji."
+      },
+      "orderProcessing": {
+        "title": "Sprzedaj i zapomnij.",
+        "description": "Dostęp jest nadawany przy płatności i odbierany przy zwrocie automatycznie. Chronimy Twój biznes przed błędami ręcznymi w czasie rzeczywistym."
+      },
+      "frontend": {
+        "title": "Mniej pytań do Twojego supportu.",
+        "description": "Klienci widzą licznik czasu bezpośrednio w zakładce 'Moje Konto'. Jasne daty wygaśnięcia to spokój dla nich i mniej pracy dla Ciebie."
+      },
+      "webhooks": {
+        "title": "Połącz się z resztą świata.",
+        "description": "Użyj naszych scenariuszy n8n, aby automatycznie wysyłać maile upsellowe, zarządzać rolami na Discordzie lub synchronizować społeczność na Circle."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Uwielbiany przez właścicieli, którzy cenią swój czas",
+    "description": "Zobacz, dlaczego twórcy porzucają skomplikowane wtyczki subskrypcyjne na rzecz prostoty sumowalnego dostępu.",
+    "readStories": "Zobacz przykłady automatyzacji",
+    "items": [
+      {
+        "quote": "Wreszcie sposób na sprzedaż dostępu do kursów bez problemów z subskrypcjami. Moi studenci uwielbiają sumować dodatkowy czas, gdy go potrzebują.",
+        "author": "Sarah Mitchell",
+        "role": "Twórca Kursów",
+        "company": "Digital Learning Academy"
+      },
+      {
+        "quote": "Scenariusze n8n oszczędzają mi 10 godzin tygodniowo. Obsługują usuwanie z Discorda i maile z przypomnieniem, gdy ja śpię.",
+        "author": "Marek Chen",
+        "role": "Lider Społeczności",
+        "company": "SoftwareCraft Studio"
+      },
+      {
+        "quote": "Import moich 2000 starych klientów z CSV zajął 5 minut. Wszyscy natychmiast odzyskali dostęp. Niesamowite.",
+        "author": "Dawid Park",
+        "role": "Właściciel Sklepu",
+        "company": "Digital Hub"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Jedna Cena. Święty Spokój.",
+    "description": "Wybierz poziom wsparcia, którego potrzebuje Twój biznes. Bez cyklicznych opłat za wtyczkę — tylko moc do wzrostu.",
+    "oneTime": "jednorazowo",
+    "launchPricing": "Cena Beta",
+    "getAccessPasses": "Odbierz swoją licencję",
+    "plans": {
+      "singleSite": {
+        "name": "Solo Plugin",
+        "description": "Sam silnik dostępu",
+        "monthlyPrice": "$159",
+        "yearlyPrice": "$100"
+      },
+      "fiveSites": {
+        "name": "Automation Pro",
+        "description": "Plugin + Scenariusze n8n",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$200"
+      },
+      "unlimited": {
+        "name": "White-Glove",
+        "description": "Zrobimy to za Ciebie",
+        "monthlyPrice": "$1500",
+        "yearlyPrice": "$1000+"
+      }
+    },
+    "features": {
+      "siteLicense1": "Rdzeń Access Passes Plugin",
+      "siteLicense5": "Wszystkie funkcje + Pakiet n8n",
+      "siteLicenseUnlimited": "Kompletne wdrożenie Done-For-You",
+      "allFeatures": "Silnik Sumowania Dostępu",
+      "yearUpdates": "Narzędzie Importu w 3 Minuty",
+      "prioritySupport": "Gotowe Scenariusze n8n",
+      "accessGroups": "Automatyzacja Maili Upsellowych",
+      "restApi": "Integracja Circle / Discord",
+      "whiteLabel": "30 Dni Dedykowanego Wsparcia"
+    }
+  },
+  "faq": {
+    "title": "Częste Pytania",
+    "description": "Wszystko, co musisz wiedzieć o przejściu na sumowalny dostęp.",
+    "getInTouch": "zapytaj nas bezpośrednio",
+    "categories": {
+      "gettingStarted": {
+        "title": "Przenosiny",
+        "questions": [
+          {
+            "question": "Czy mogę zaimportować obecnych klientów?",
+            "answer": "Tak! Nasz inteligentny importer skanuje obecne zamówienia WooCommerce lub przyjmuje plik CSV. Możesz przenieść całą bazę w mniej niż 3 minuty, nie tracąc ani jednego dnia dostępu Twoich klientów."
+          },
+          {
+            "question": "Czy to zastępuje WooCommerce Subscriptions?",
+            "answer": "Dla większości osób to lepsza alternatywa. Zamiast automatycznego obciążania kart, pozwala użytkownikom kupować 'pakiety czasu', które się sumują. Eliminuje to stres związany z nieudanymi płatnościami."
+          }
+        ]
+      },
+      "features": {
+        "title": "Automatyzacja & n8n",
+        "questions": [
+          {
+            "question": "Jak działają scenariusze n8n?",
+            "answer": "Kupując poziom Automation Pro, otrzymujesz gotowe pliki do importu w n8n. Scenariusze te monitorują Twój sklep i automatycznie wysyłają maile lub zarządzają dostępem w zewnętrznych grupach jak Discord czy Circle."
+          },
+          {
+            "question": "Co to jest usługa 'White-Glove'?",
+            "answer": "Przejmujemy całą konfigurację techniczną. Instalujemy wtyczkę, konfigurujemy Twój serwer n8n, ustawiamy automatyzację maili i upewniamy się, że wszystko działa idealnie, abyś Ty mógł skupić się na sprzedaży."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "ctaTitle": "Gotowy postawić zarządzanie dostępem na autopilocie?",
+    "ctaDescription": "Dołącz do twórców, którzy spędzają więcej czasu na tworzeniu, a mniej na pilnowaniu dat wygaśnięcia.",
+    "getAccessPasses": "Zacznij teraz",
+    "navigation": {
+      "features": "Jak to działa",
+      "aboutUs": "Nasza Misja",
+      "pricing": "Cennik",
+      "faq": "FAQ",
+      "contact": "Kontakt"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "support": "Wsparcie"
+    },
+    "legal": {
+      "privacyPolicy": "Polityka Prywatności"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Zbudowaliśmy to, bo subskrypcje są popsute",
+      "subtitle": "Kompleksowość zabijała konwersję, więc ją uprościliśmy.",
+      "description1": "Wierzymy, że sprzedaż dostępu cyfrowego nie powinna wymagać doktoratu z inżynierii systemowej. Większość narzędzi wymusza sztywne modele subskrypcyjne, które frustrują klientów odrzuconymi płatnościami.",
+      "description2": "Access Passes powstało z jednego prostego pomysłu: Sumowalny czas. Twoi klienci kupują dostęp kiedy chcą, a on po prostu działa. Połączyliśmy tę prostotę z potężną automatyzacją n8n, dając Ci najbardziej bezobsługowy system zarządzania dostępem, jaki kiedykolwiek powstał dla WooCommerce."
+    }
+  },
+  "common": {
+    "learnMore": "Zobacz automatyzacje",
+    "getStarted": "Zacznij od $100",
+    "viewAll": "Zobacz wszystkie funkcje"
+  }
+}

@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { type Language } from "@/i18n";
 import { cn } from "@/lib/utils";
 
-export const AboutSection = () => {
+interface AboutSectionProps {
+  lang?: Language;
+}
+
+export const AboutSection = ({ lang = "en" }: AboutSectionProps) => {
   return (
     <section className="container mt-10 flex max-w-5xl flex-col-reverse gap-8 md:mt-14 md:gap-14 lg:mt-20 lg:flex-row lg:items-end">
       {/* Images Left - Text Right */}

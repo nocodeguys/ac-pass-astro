@@ -1,13 +1,17 @@
 import { format } from "date-fns";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-const BlogPost = ({
-  post,
-  children,
-}: {
-  post: any[];
+
+import { type Language, useTranslations } from "@/i18n";
+
+interface BlogPostProps {
+  post: any;
   children: React.ReactNode;
-}) => {
+  lang?: Language;
+}
+
+const BlogPost = ({ post, children, lang = "en" }: BlogPostProps) => {
+  const t = useTranslations(lang);
   const { title, authorName, image, pubDate, description, authorImage } =
     post.data;
   return (

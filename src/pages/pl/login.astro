@@ -1,12 +1,11 @@
 ---
 import { getSiteMetadata } from '@/consts';
-import { getLangFromUrl } from '@/i18n';
 
 import { Background } from '@/components/background';
 import LoginSection from '@/components/blocks/login-section';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = 'pl' as const;
 const metadata = getSiteMetadata(lang);
 ---
 

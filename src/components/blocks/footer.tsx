@@ -2,35 +2,42 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL } from "@/consts";
+import { type Language, useTranslations, getLocalizedPath } from "@/i18n";
 
-export function Footer() {
+interface FooterProps {
+  lang?: Language;
+}
+
+export function Footer({ lang = "en" }: FooterProps) {
+  const t = useTranslations(lang);
+
   const navigation = [
-    { name: "Features", href: "/#feature-modern-teams" },
-    { name: "About Us", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: t("footer.navigation.features"), href: getLocalizedPath("/#feature-modern-teams", lang) },
+    { name: t("footer.navigation.aboutUs"), href: getLocalizedPath("/about", lang) },
+    { name: t("footer.navigation.pricing"), href: getLocalizedPath("/pricing", lang) },
+    { name: t("footer.navigation.faq"), href: getLocalizedPath("/faq", lang) },
+    { name: t("footer.navigation.contact"), href: getLocalizedPath("/contact", lang) },
   ];
 
   const social = [
-    { name: "Twitter", href: "https://x.com/accesspasses" },
-    { name: "Support", href: "/contact" },
+    { name: t("footer.social.twitter"), href: "https://x.com/accesspasses" },
+    { name: t("footer.social.support"), href: getLocalizedPath("/contact", lang) },
   ];
 
-  const legal = [{ name: "Privacy Policy", href: "/privacy" }];
+  const legal = [{ name: t("footer.legal.privacyPolicy"), href: getLocalizedPath("/privacy", lang) }];
 
   return (
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
       <div className="container space-y-3 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-          Ready to simplify access management?
+          {t("footer.ctaTitle")}
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Transform your WooCommerce store with stackable time-based access. No recurring billing complexity — just simple purchases that grant time.
+          {t("footer.ctaDescription")}
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <a href={GITHUB_URL}>Get Access Passes</a>
+            <a href={GITHUB_URL}>{t("footer.getAccessPasses")}</a>
           </Button>
         </div>
       </div>

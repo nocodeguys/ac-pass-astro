@@ -1,6 +1,5 @@
 ---
 import { getSiteMetadata } from '@/consts';
-import { getLangFromUrl } from '@/i18n';
 
 import { Background } from '@/components/background';
 import { FAQ } from '@/components/blocks/faq';
@@ -8,7 +7,7 @@ import { Testimonials } from '@/components/blocks/testimonials';
 import { DashedLine } from '@/components/dashed-line';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = 'pl' as const;
 const metadata = getSiteMetadata(lang);
 ---
 <DefaultLayout title={metadata.title.default} description={metadata.description} lang={lang}>

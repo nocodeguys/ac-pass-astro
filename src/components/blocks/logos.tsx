@@ -1,5 +1,6 @@
 import Marquee from "react-fast-marquee";
 
+import { type Language, useTranslations } from "@/i18n";
 import { cn } from "@/lib/utils";
 
 type Company = {
@@ -10,7 +11,12 @@ type Company = {
   href: string;
 };
 
-export const Logos = () => {
+interface LogosProps {
+  lang?: Language;
+}
+
+export const Logos = ({ lang = "en" }: LogosProps) => {
+  const t = useTranslations(lang);
   const topRowCompanies = [
     {
       name: "Mercury",
@@ -85,10 +91,10 @@ export const Logos = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Trusted by WooCommerce store owners worldwide.
+            {t("logos.title")}
             <br className="max-md:hidden" />
             <span className="text-muted-foreground">
-              From course creators to membership sites to digital product sellers.
+              {t("logos.subtitle")}
             </span>
           </h2>
         </div>

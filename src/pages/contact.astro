@@ -1,12 +1,16 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getSiteMetadata } from '@/consts';
+import { getLangFromUrl } from '@/i18n';
 
 import { Background } from '@/components/background';
 import { Contact } from '@/components/blocks/contact';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const metadata = getSiteMetadata(lang);
 ---
-<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<DefaultLayout title={metadata.title.default} description={metadata.description} lang={lang}>
   <Background>
-    <Contact />
+    <Contact lang={lang} />
   </Background>
 </DefaultLayout>

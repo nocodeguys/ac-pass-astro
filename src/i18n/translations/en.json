@@ -1,0 +1,219 @@
+{
+  "site": {
+    "title": "WooCommerce Access Passes | Sell Time-Based Access with Ease",
+    "description": "Stop fighting complex subscriptions. Transform WooCommerce products into stackable time-based access for courses, communities, and digital goods.",
+    "shortDescription": "The simplest way to sell time-based access. Stackable periods, no recurring billing headaches, and automated community management."
+  },
+  "nav": {
+    "features": "How it works",
+    "aboutUs": "Our Mission",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "login": "Login",
+    "getAccessPasses": "Start Selling Time",
+    "openMainMenu": "Open main menu",
+    "dropdownItems": {
+      "stackFirst": {
+        "title": "Stackable Access",
+        "description": "Let customers extend their access by simply buying more time — no overlapping accounts."
+      },
+      "accessManagement": {
+        "title": "Automation Engine",
+        "description": "Automate your community, upsells, and renewals with our ready-to-use n8n scenarios."
+      }
+    }
+  },
+  "hero": {
+    "title": "Stop Fighting Subscriptions. Start Selling Time.",
+    "description": "Turn any WooCommerce product into time-based access. No complex billing, no failed renewals — just simple purchases that stack. Perfect for courses, Discord groups, and premium content.",
+    "cta": "Get Access Passes",
+    "viewDocs": "View Automation Scenarios",
+    "imageAlt": "WooCommerce Access Passes automation and dashboard overview",
+    "features": {
+      "stackableAccess": {
+        "title": "Stackable Time",
+        "description": "New purchases automatically extend existing access. No more subscription overlaps."
+      },
+      "flexibleGroups": {
+        "title": "Access Groups",
+        "description": "One pass can grant access to a course, a forum, and a download library simultaneously."
+      },
+      "guestFriendly": {
+        "title": "3-Minute Migration",
+        "description": "Import your existing WooCommerce orders or CSV files and grant access instantly."
+      },
+      "fullApi": {
+        "title": "Business on Autopilot",
+        "description": "Ready-to-use n8n scenarios to handle your emails, Circle, and Discord removals."
+      }
+    }
+  },
+  "logos": {
+    "title": "Powering the next generation of digital entrepreneurs.",
+    "subtitle": "Trusted by course creators, community leaders, and digital product pioneers."
+  },
+  "features": {
+    "tagline": "SIMPLICITY OVER COMPLEXITY",
+    "title": "Built for Digital Product Sellers",
+    "description": "Access Passes transforms your shop into an intelligent time distribution system. Stop chasing failed credit cards and start offering the flexibility your customers want.",
+    "items": {
+      "stackFirst": "Stack time, not problems",
+      "flexibleGroups": "One key to many doors",
+      "developerApi": "Your business on autopilot"
+    }
+  },
+  "resourceAllocation": {
+    "title": "Everything you need to stop watching the clock",
+    "items": {
+      "adminDashboard": {
+        "title": "See everything at a glance.",
+        "description": "No more digging through orders. One look and you know exactly who is active, when they expire, and how many days they have left."
+      },
+      "wooIntegration": {
+        "title": "Zero new tools to learn.",
+        "description": "Works with your existing WooCommerce products and payment gateways. No external platforms or complex setups required."
+      },
+      "orderProcessing": {
+        "title": "Sell and forget.",
+        "description": "Access is granted on payment and revoked on refund automatically. We protect your business from manual errors in real-time."
+      },
+      "frontend": {
+        "title": "Fewer support tickets.",
+        "description": "Customers see their countdown timer directly in 'My Account'. Clear expiration dates mean peace of mind for them and less work for you."
+      },
+      "webhooks": {
+        "title": "Connect with the rest of the world.",
+        "description": "Use our n8n scenarios to send automated upsell emails, manage Discord roles, or sync with your Circle community effortlessly."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Loved by owners who value their time",
+    "description": "See why creators are ditching complex subscription plugins for the simplicity of stackable access.",
+    "readStories": "See Automation Examples",
+    "items": [
+      {
+        "quote": "Finally, a way to sell course access without subscription headaches. My students love stacking extra time when they need it.",
+        "author": "Sarah Mitchell",
+        "role": "Course Creator",
+        "company": "Digital Learning Academy"
+      },
+      {
+        "quote": "The n8n scenarios saved me 10 hours a week. It handles my Discord removals and renewal emails while I sleep.",
+        "author": "Marcus Chen",
+        "role": "Community Leader",
+        "company": "SoftwareCraft Studio"
+      },
+      {
+        "quote": "Importing my old 2,000 customers via CSV took 5 minutes. They all got their access back instantly. Incredible.",
+        "author": "David Park",
+        "role": "Store Owner",
+        "company": "Digital Hub"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "One Price. Infinite Peace of Mind.",
+    "description": "Choose the level of support your business needs. No recurring plugin fees — just the power to grow.",
+    "oneTime": "one-time",
+    "launchPricing": "Beta pricing",
+    "getAccessPasses": "Claim Your Pass",
+    "plans": {
+      "singleSite": {
+        "name": "Solo Plugin",
+        "description": "Just the core engine",
+        "monthlyPrice": "$159",
+        "yearlyPrice": "$100"
+      },
+      "fiveSites": {
+        "name": "Automation Pro",
+        "description": "Plugin + n8n Scenarios",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$200"
+      },
+      "unlimited": {
+        "name": "White-Glove",
+        "description": "We build it for you",
+        "monthlyPrice": "$1500",
+        "yearlyPrice": "$1000+"
+      }
+    },
+    "features": {
+      "siteLicense1": "Core Access Passes Plugin",
+      "siteLicense5": "All Plugin Features + n8n Pack",
+      "siteLicenseUnlimited": "Complete Done-For-You Setup",
+      "allFeatures": "Stackable Access Engine",
+      "yearUpdates": "3-Minute Importer Tool",
+      "prioritySupport": "Ready-to-use n8n Scenarios",
+      "accessGroups": "Upsell Email Automations",
+      "restApi": "Circle/Discord Integration",
+      "whiteLabel": "30 Days of Dedicated Support"
+    }
+  },
+  "faq": {
+    "title": "Common Questions",
+    "description": "Everything you need to know about switching to stackable access.",
+    "getInTouch": "ask us directly",
+    "categories": {
+      "gettingStarted": {
+        "title": "Switching Over",
+        "questions": [
+          {
+            "question": "Can I import my current customers?",
+            "answer": "Yes! Our intelligent importer scans your existing WooCommerce orders or accepts a CSV file. You can migrate your entire user base in less than 3 minutes without losing a single day of their access."
+          },
+          {
+            "question": "Does this replace WooCommerce Subscriptions?",
+            "answer": "It's a better alternative for most. Instead of charging cards automatically, it lets users buy 'time packs' that stack. This eliminates failed payment stress and subscription fatigue."
+          }
+        ]
+      },
+      "features": {
+        "title": "Automation & n8n",
+        "questions": [
+          {
+            "question": "How do the n8n scenarios work?",
+            "answer": "When you buy the Automation Pro tier, you get pre-built files you can import into n8n. These scenarios watch your store and automatically send upsell emails or manage your external communities like Discord and Circle."
+          },
+          {
+            "question": "What is 'White-Glove' service?",
+            "answer": "We take over the entire technical setup. We install the plugin, configure your n8n server, set up your email automations, and ensure everything is running perfectly so you can just focus on selling."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "ctaTitle": "Ready to put your access management on autopilot?",
+    "ctaDescription": "Join the creators who spend more time creating and less time managing expiration dates.",
+    "getAccessPasses": "Get Started Now",
+    "navigation": {
+      "features": "How it works",
+      "aboutUs": "Our Mission",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "support": "Support"
+    },
+    "legal": {
+      "privacyPolicy": "Privacy Policy"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "We Built This Because Subscriptions Are Broken",
+      "subtitle": "Complexity was killing conversions, so we fixed it.",
+      "description1": "We believe selling digital access shouldn't require a degree in systems engineering. Most tools force you into rigid subscription models that frustrate customers with failed payments and overlapping accounts.",
+      "description2": "Access Passes was built on one simple idea: Stackable time. Your customers buy access when they want it, and it just works. We've combined this simplicity with powerful n8n automations to give you the most hands-off management system ever built for WooCommerce."
+    }
+  },
+  "common": {
+    "learnMore": "See the Automations",
+    "getStarted": "Start for $100",
+    "viewAll": "View all features"
+  }
+}

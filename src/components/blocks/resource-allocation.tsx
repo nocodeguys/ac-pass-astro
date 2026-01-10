@@ -1,115 +1,117 @@
 import { DashedLine } from "../dashed-line";
 
+import { type Language, useTranslations } from "@/i18n";
 import { cn } from "@/lib/utils";
 
-const topItems = [
-  {
-    title: "Comprehensive Admin Dashboard.",
-    description:
-      "Intuitive user access overview with real-time status monitoring and detailed history tracking.",
-    images: [
-      {
-        src: "/resource-allocation/templates.webp",
-        alt: "Admin dashboard interface",
-        width: 495,
-        height: 186,
-      },
-    ],
-    className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: [""],
-  },
-  {
-    title: "Seamless WooCommerce Integration.",
-    description: "Works with your existing products. No external systems or complex setup needed.",
-    images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
-      {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
-      {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
-    ],
-    className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
-    fade: [],
-  },
-];
+interface ResourceAllocationProps {
+  lang?: Language;
+}
 
-const bottomItems = [
-  {
-    title: "Smart Order Processing.",
-    description:
-      "Automatic access on payment success, smart refund handling, and failed payment protection.",
-    images: [
-      {
-        src: "/resource-allocation/graveyard.webp",
-        alt: "Order processing interface",
-        width: 305,
-        height: 280,
-      },
-    ],
-    className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: ["bottom"],
-  },
-  {
-    title: "User-Friendly Frontend.",
-    description:
-      "Clean My Account integration with access status, expiration dates, and mobile-responsive design.",
-    images: [
-      {
-        src: "/resource-allocation/discussions.webp",
-        alt: "My Account integration",
-        width: 320,
-        height: 103,
-      },
-    ],
-    className:
-      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
-    fade: [""],
-  },
-  {
-    title: "Webhook System.",
-    description:
-      "Outgoing webhooks for access changes, incoming webhooks for integrations, API key authentication.",
-    images: [
-      {
-        src: "/resource-allocation/notifications.webp",
-        alt: "Webhook configuration",
-        width: 305,
-        height: 280,
-      },
-    ],
-    className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: ["bottom"],
-  },
-];
+export const ResourceAllocation = ({ lang = "en" }: ResourceAllocationProps) => {
+  const t = useTranslations(lang);
 
-export const ResourceAllocation = () => {
+  const topItems = [
+    {
+      title: t("resourceAllocation.items.adminDashboard.title"),
+      description: t("resourceAllocation.items.adminDashboard.description"),
+      images: [
+        {
+          src: "/resource-allocation/templates.webp",
+          alt: "Admin dashboard interface",
+          width: 495,
+          height: 186,
+        },
+      ],
+      className:
+        "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      fade: [""],
+    },
+    {
+      title: t("resourceAllocation.items.wooIntegration.title"),
+      description: t("resourceAllocation.items.wooIntegration.description"),
+      images: [
+        { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
+        { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
+        {
+          src: "/logos/notion.svg",
+          alt: "Notion logo",
+          width: 48,
+          height: 48,
+        },
+        { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
+        {
+          src: "/logos/monday.svg",
+          alt: "Monday logo",
+          width: 48,
+          height: 48,
+        },
+        {
+          src: "/logos/drive.svg",
+          alt: "Google Drive logo",
+          width: 48,
+          height: 48,
+        },
+        {
+          src: "/logos/jira.svg",
+          alt: "Jira logo",
+          width: 48,
+          height: 48,
+        },
+        { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      ],
+      className:
+        "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
+      fade: [],
+    },
+  ];
+
+  const bottomItems = [
+    {
+      title: t("resourceAllocation.items.orderProcessing.title"),
+      description: t("resourceAllocation.items.orderProcessing.description"),
+      images: [
+        {
+          src: "/resource-allocation/graveyard.webp",
+          alt: "Order processing interface",
+          width: 305,
+          height: 280,
+        },
+      ],
+      className:
+        "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      fade: ["bottom"],
+    },
+    {
+      title: t("resourceAllocation.items.frontend.title"),
+      description: t("resourceAllocation.items.frontend.description"),
+      images: [
+        {
+          src: "/resource-allocation/discussions.webp",
+          alt: "My Account integration",
+          width: 320,
+          height: 103,
+        },
+      ],
+      className:
+        "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
+      fade: [""],
+    },
+    {
+      title: t("resourceAllocation.items.webhooks.title"),
+      description: t("resourceAllocation.items.webhooks.description"),
+      images: [
+        {
+          src: "/resource-allocation/notifications.webp",
+          alt: "Webhook configuration",
+          width: 305,
+          height: 280,
+        },
+      ],
+      className:
+        "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      fade: ["bottom"],
+    },
+  ];
   return (
     <section
       id="resource-allocation"
@@ -117,7 +119,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Everything you need to manage time-based access
+          {t("resourceAllocation.title")}
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">

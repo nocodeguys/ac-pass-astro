@@ -14,6 +14,9 @@ const blog = defineCollection({
     image: z.string().optional(),
     authorImage: z.string().optional(),
     authorName: z.string().optional(),
+    // i18n fields
+    lang: z.enum(["en", "pl"]).default("en"),
+    translationOf: z.string().optional(), // ID of the original post this is a translation of
   }),
 });
 

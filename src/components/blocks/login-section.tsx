@@ -7,7 +7,14 @@ import { Card, CardContent, CardHeader } from "../ui/card";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
 
-const LoginSection = () => {
+import { type Language, useTranslations, getLocalizedPath } from "@/i18n";
+
+interface LoginSectionProps {
+  lang?: Language;
+}
+
+const LoginSection = ({ lang = "en" }: LoginSectionProps) => {
+  const t = useTranslations(lang);
   return (
     <section className="py-28 lg:pt-44 lg:pb-32">
       <div className="container">
@@ -21,18 +28,18 @@ const LoginSection = () => {
                 height={18}
                 className="mb-7 dark:invert"
               />
-              <p className="mb-2 text-2xl font-bold">Welcome back</p>
+              <p className="mb-2 text-2xl font-bold">{t("login.welcomeBack")}</p>
               <p className="text-muted-foreground">
-                Please enter your details.
+                {t("login.enterDetails")}
               </p>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
-                <Input type="email" placeholder="Enter your email" required />
+                <Input type="email" placeholder={t("login.emailPlaceholder")} required />
                 <div>
                   <Input
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder={t("login.passwordPlaceholder")}
                     required
                   />
                 </div>
@@ -46,25 +53,25 @@ const LoginSection = () => {
                       htmlFor="remember"
                       className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
-                      Remember me
+                      {t("login.rememberMe")}
                     </label>
                   </div>
                   <a href="#" className="text-primary text-sm font-medium">
-                    Forgot password
+                    {t("login.forgotPassword")}
                   </a>
                 </div>
                 <Button type="submit" className="mt-2 w-full">
-                  Create an account
+                  {t("login.signIn")}
                 </Button>
                 <Button variant="outline" className="w-full">
                   <FcGoogle className="mr-2 size-5" />
-                  Sign up with Google
+                  {t("login.signUpGoogle")}
                 </Button>
               </div>
               <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
-                <p>Don&apos;t have an account?</p>
-                <a href="/signup" className="text-primary font-medium">
-                  Sign up
+                <p>{t("login.noAccount")}</p>
+                <a href={getLocalizedPath("/signup", lang)} className="text-primary font-medium">
+                  {t("login.signUp")}
                 </a>
               </div>
             </CardContent>

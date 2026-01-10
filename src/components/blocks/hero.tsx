@@ -9,47 +9,53 @@ import {
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL } from "@/consts";
+import { type Language, useTranslations, getLocalizedPath } from "@/i18n";
 
-const features = [
-  {
-    title: "Stackable Access",
-    description: "Multiple purchases automatically extend access periods. No overlapping subscriptions.",
-    icon: Layers,
-  },
-  {
-    title: "Flexible Groups",
-    description: "Bundle products under shared access timers or use standalone products.",
-    icon: Clock,
-  },
-  {
-    title: "Guest-Friendly",
-    description: "Automatic account creation for guest purchasers with seamless access.",
-    icon: UserPlus,
-  },
-  {
-    title: "Full API & Webhooks",
-    description: "RESTful API, incoming/outgoing webhooks, secure authentication.",
-    icon: Webhook,
-  },
-];
+interface HeroProps {
+  lang?: Language;
+}
 
-export const Hero = () => {
+export const Hero = ({ lang = "en" }: HeroProps) => {
+  const t = useTranslations(lang);
+
+  const features = [
+    {
+      title: t("hero.features.stackableAccess.title"),
+      description: t("hero.features.stackableAccess.description"),
+      icon: Layers,
+    },
+    {
+      title: t("hero.features.flexibleGroups.title"),
+      description: t("hero.features.flexibleGroups.description"),
+      icon: Clock,
+    },
+    {
+      title: t("hero.features.guestFriendly.title"),
+      description: t("hero.features.guestFriendly.description"),
+      icon: UserPlus,
+    },
+    {
+      title: t("hero.features.fullApi.title"),
+      description: t("hero.features.fullApi.description"),
+      icon: Webhook,
+    },
+  ];
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Stackable Time-Based Access for WooCommerce
+          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
+            {t("hero.title")}
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Transform your WooCommerce store into a sophisticated access management system. No recurring billing, no complexity — just simple purchases that grant time.
+            {t("hero.description")}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href={GITHUB_URL}>Get Access Passes</a>
+              <a href={GITHUB_URL}>{t("hero.cta")}</a>
             </Button>
             <Button
               variant="outline"
@@ -57,10 +63,10 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="/docs"
+                href={getLocalizedPath("/docs", lang)}
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                View Documentation
+                {t("hero.viewDocs")}
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
@@ -100,7 +106,7 @@ export const Hero = () => {
         <div className="relative h-[793px] w-full">
           <img
             src="/hero.webp"
-            alt="WooCommerce Access Passes dashboard"
+            alt={t("hero.imageAlt")}
             className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />
         </div>

@@ -2,18 +2,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-const BlogPosts = ({ posts }: { posts: any[] }) => {
+import { type Language, useTranslations, getLocalizedPath } from "@/i18n";
+
+interface BlogPostsProps {
+  posts: any[];
+  lang?: Language;
+}
+
+const BlogPosts = ({ posts, lang = "en" }: BlogPostsProps) => {
+  const t = useTranslations(lang);
   return (
     <>
       <section>
         <div className="container max-w-5xl space-y-4 text-center">
           <h1 className="text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            Blog
+            {t("blog.title")}
           </h1>
 
           <p className="text-muted-foreground max-w-md leading-snug font-medium lg:mx-auto">
-            Explore our blog for insightful articles, personal reflections and
-            more.
+            {t("blog.description")}
           </p>
         </div>
       </section>
@@ -24,7 +31,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
               <a
                 key={post.id}
                 className="rounded-xl border"
-                href={`/blog/${post.id}/`}
+                href={getLocalizedPath(`/blog/${post.id}/`, lang)}
               >
                 <div className="p-2">
                   <img
@@ -53,7 +60,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
                       </span>
                     </div>
                     <Badge variant="secondary" className="h-fit">
-                      10 Min Read
+                      10 {t("blog.minRead")}
                     </Badge>
                   </div>
                 </div>

@@ -11,87 +11,54 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { type Language, useTranslations } from "@/i18n";
 import { cn } from "@/lib/utils";
 
-const items = [
-  {
-    quote: "Finally, a way to sell course access without subscription headaches. My students love stacking extra time when they need it.",
-    author: "Sarah Mitchell",
-    role: "Course Creator",
-    company: "Digital Learning Academy",
-    image: "/testimonials/amy-chase.webp",
-  },
-  {
-    quote: "Access Passes handles our license management perfectly. Customers buy time, it stacks, no failed renewals to chase.",
-    author: "Marcus Chen",
-    role: "Lead Developer",
-    company: "SoftwareCraft Studio",
-    image: "/testimonials/jonas-kotara.webp",
-  },
-  {
-    quote: "We switched from a complex subscription plugin. Access Passes is so much simpler — and our members actually prefer it.",
-    author: "Emily Rodriguez",
-    role: "Community Manager",
-    company: "Creator's Guild",
-    image: "/testimonials/kevin-yam.webp",
-  },
-  {
-    quote: "The guest checkout with automatic account creation is a game-changer for conversions. Setup took 15 minutes.",
-    author: "David Park",
-    role: "Store Owner",
-    company: "Digital Downloads Hub",
-    image: "/testimonials/kundo-marta.webp",
-  },
-  {
-    quote: "Our course completion rates went up 40% after switching to Access Passes. Students feel less pressure with stackable time.",
-    author: "Lisa Thompson",
-    role: "Education Director",
-    company: "SkillPath Online",
-    image: "/testimonials/amy-chase.webp",
-  },
-  {
-    quote: "The webhook integration let us sync access with our custom member portal. The API documentation is excellent.",
-    author: "James Wilson",
-    role: "Technical Lead",
-    company: "MemberStack Pro",
-    image: "/testimonials/jonas-kotara.webp",
-  },
-  {
-    quote: "No more chasing failed payments or managing complex subscription tiers. Access Passes just works.",
-    author: "Anna Martinez",
-    role: "Founder",
-    company: "Premium Content Co",
-    image: "/testimonials/kevin-yam.webp",
-  },
-  {
-    quote: "The admin dashboard gives us complete visibility into who has access and when it expires. Customer support loves it.",
-    author: "Michael Brown",
-    role: "Operations Manager",
-    company: "LearnFlow Academy",
-    image: "/testimonials/kundo-marta.webp",
-  },
+const testimonialImages = [
+  "/testimonials/amy-chase.webp",
+  "/testimonials/jonas-kotara.webp",
+  "/testimonials/kevin-yam.webp",
+  "/testimonials/kundo-marta.webp",
+  "/testimonials/amy-chase.webp",
+  "/testimonials/jonas-kotara.webp",
+  "/testimonials/kevin-yam.webp",
+  "/testimonials/kundo-marta.webp",
 ];
+
+interface TestimonialsProps {
+  className?: string;
+  dashedLineClassName?: string;
+  lang?: Language;
+}
 
 export const Testimonials = ({
   className,
   dashedLineClassName,
-}: {
-  className?: string;
-  dashedLineClassName?: string;
-}) => {
+  lang = "en",
+}: TestimonialsProps) => {
+  const t = useTranslations(lang);
+
+  // Build items from translations
+  const items = Array.from({ length: 8 }, (_, i) => ({
+    quote: t(`testimonials.items.${i}.quote`),
+    author: t(`testimonials.items.${i}.author`),
+    role: t(`testimonials.items.${i}.role`),
+    company: t(`testimonials.items.${i}.company`),
+    image: testimonialImages[i],
+  }));
   return (
     <>
       <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Loved by WooCommerce store owners
+              {t("testimonials.title")}
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Store owners choose Access Passes for its simplicity, flexibility, and reliable time-based access management.
+              {t("testimonials.description")}
             </p>
             <Button variant="outline" className="shadow-md">
-              Read Customer Stories <ArrowRight className="size-4" />
+              {t("testimonials.readStories")} <ArrowRight className="size-4" />
             </Button>
           </div>
 
