@@ -114,41 +114,46 @@
     ]
   },
   "pricing": {
-    "title": "Jedna Cena. Święty Spokój.",
-    "description": "Wybierz poziom wsparcia, którego potrzebuje Twój biznes. Bez cyklicznych opłat za wtyczkę — tylko moc do wzrostu.",
+    "title": "Prosty Cennik Nastawiony na Wyniki",
+    "description": "Wybierz poziom automatyzacji, którego potrzebuje Twój biznes. Bez cyklicznych opłat za wtyczkę — tylko jednorazowa inwestycja w Twój rozwój.",
     "oneTime": "jednorazowo",
     "launchPricing": "Cena Beta",
     "getAccessPasses": "Odbierz swoją licencję",
     "plans": {
       "singleSite": {
         "name": "Solo Plugin",
-        "description": "Sam silnik dostępu",
+        "description": "Silnik Dostępu",
         "monthlyPrice": "$159",
         "yearlyPrice": "$100"
       },
       "fiveSites": {
         "name": "Automation Pro",
-        "description": "Plugin + Scenariusze n8n",
+        "description": "Biznes na Autopilocie",
         "monthlyPrice": "$249",
         "yearlyPrice": "$200"
       },
       "unlimited": {
-        "name": "White-Glove",
-        "description": "Zrobimy to za Ciebie",
-        "monthlyPrice": "$1500",
+        "name": "White-Glove Service",
+        "description": "Kompletne Wdrożenie",
+        "monthlyPrice": "$1500+",
         "yearlyPrice": "$1000+"
       }
     },
     "features": {
-      "siteLicense1": "Rdzeń Access Passes Plugin",
-      "siteLicense5": "Wszystkie funkcje + Pakiet n8n",
-      "siteLicenseUnlimited": "Kompletne wdrożenie Done-For-You",
-      "allFeatures": "Silnik Sumowania Dostępu",
-      "yearUpdates": "Narzędzie Importu w 3 Minuty",
-      "prioritySupport": "Gotowe Scenariusze n8n",
-      "accessGroups": "Automatyzacja Maili Upsellowych",
-      "restApi": "Integracja Circle / Discord",
-      "whiteLabel": "30 Dni Dedykowanego Wsparcia"
+      "siteLicense1": "Architektura Sumowania: Wielokrotne zakupy automatycznie wydłużają okres dostępu",
+      "siteLicense5": "Wszystko co w Solo Plugin",
+      "siteLicenseUnlimited": "Wszystko co w Automation Pro",
+      "allFeatures": "Importer w 3 Minuty: Błyskawiczna migracja obecnych zamówień WooCommerce lub plików CSV",
+      "yearUpdates": "Elastyczne Grupy Dostępu: Łączenie wielu produktów pod wspólnym licznikiem czasu",
+      "prioritySupport": "Przyjazny dla Gości: Automatyczne tworzenie kont dla kupujących bez rejestracji",
+      "accessGroups": "Gotowe Scenariusze n8n: Pakiety automatyzacji gotowe do wgrania do Twojego systemu",
+      "restApi": "Synchronizacja Społeczności: Automatyczne usuwanie z Discord/Circle po wygaśnięciu dostępu",
+      "whiteLabel": "Inteligentne Upselle: Automatyczne maile (MailerLite/Resend) wysyłane przed końcem czasu",
+      "webhookSystem": "System Webhooków: Pełna obsługa przychodzących i wychodzących powiadomień",
+      "technicalSetup": "Pełna Konfiguracja Techniczna: My instalujemy wtyczkę i stawiamy Twój serwer n8n",
+      "customIntegration": "Indywidualna Integracja: Łączymy system z Twoim mailingiem, Discordem lub Circle",
+      "dedicatedSupport": "30 Dni Dedykowanego Wsparcia: Bezpośrednia pomoc naszego zespołu, by Twój start był idealny",
+      "doneForYouMigration": "Migracja za Ciebie: My zajmujemy się przeniesieniem bazy Twoich obecnych klientów"
     }
   },
   "faq": {

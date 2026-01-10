@@ -3,7 +3,8 @@
 
 import type { Language } from "./i18n";
 
-export const SITE_TITLE = "WooCommerce Access Passes - Time-Based Access Management";
+export const SITE_TITLE =
+  "WooCommerce Access Passes - Time-Based Access Management";
 export const SITE_DESCRIPTION =
   "Transform your WooCommerce store into a sophisticated time-based access management system. Stackable access periods, flexible groups, and no recurring billing complexity.";
 
@@ -61,7 +62,11 @@ export function getSiteMetadata(lang: Language) {
       icon: [
         { url: "/favicon/favicon.ico", sizes: "48x48" },
         { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-        { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+        {
+          url: "/favicon/favicon-96x96.png",
+          sizes: "96x96",
+          type: "image/png",
+        },
         { url: "/favicon/favicon.svg", type: "image/svg+xml" },
         { url: "/favicon/favicon.ico" },
       ],

@@ -12,19 +12,39 @@ export function Footer({ lang = "en" }: FooterProps) {
   const t = useTranslations(lang);
 
   const navigation = [
-    { name: t("footer.navigation.features"), href: getLocalizedPath("/#feature-modern-teams", lang) },
-    { name: t("footer.navigation.aboutUs"), href: getLocalizedPath("/about", lang) },
-    { name: t("footer.navigation.pricing"), href: getLocalizedPath("/pricing", lang) },
+    {
+      name: t("footer.navigation.features"),
+      href: getLocalizedPath("/#feature-modern-teams", lang),
+    },
+    {
+      name: t("footer.navigation.aboutUs"),
+      href: getLocalizedPath("/about", lang),
+    },
+    {
+      name: t("footer.navigation.pricing"),
+      href: getLocalizedPath("/pricing", lang),
+    },
     { name: t("footer.navigation.faq"), href: getLocalizedPath("/faq", lang) },
-    { name: t("footer.navigation.contact"), href: getLocalizedPath("/contact", lang) },
+    {
+      name: t("footer.navigation.contact"),
+      href: getLocalizedPath("/contact", lang),
+    },
   ];
 
   const social = [
     { name: t("footer.social.twitter"), href: "https://x.com/accesspasses" },
-    { name: t("footer.social.support"), href: getLocalizedPath("/contact", lang) },
+    {
+      name: t("footer.social.support"),
+      href: getLocalizedPath("/contact", lang),
+    },
   ];
 
-  const legal = [{ name: t("footer.legal.privacyPolicy"), href: getLocalizedPath("/privacy", lang) }];
+  const legal = [
+    {
+      name: t("footer.legal.privacyPolicy"),
+      href: getLocalizedPath("/privacy", lang),
+    },
+  ];
 
   return (
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">

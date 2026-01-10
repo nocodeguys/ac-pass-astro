@@ -114,41 +114,46 @@
     ]
   },
   "pricing": {
-    "title": "One Price. Infinite Peace of Mind.",
-    "description": "Choose the level of support your business needs. No recurring plugin fees — just the power to grow.",
+    "title": "Simple, Results-Driven Pricing",
+    "description": "Choose the level of automation your business needs. No recurring plugin fees—just a one-time investment in your growth.",
     "oneTime": "one-time",
     "launchPricing": "Beta pricing",
     "getAccessPasses": "Claim Your Pass",
     "plans": {
       "singleSite": {
         "name": "Solo Plugin",
-        "description": "Just the core engine",
+        "description": "The Core Engine",
         "monthlyPrice": "$159",
         "yearlyPrice": "$100"
       },
       "fiveSites": {
         "name": "Automation Pro",
-        "description": "Plugin + n8n Scenarios",
+        "description": "The Business Autopilot",
         "monthlyPrice": "$249",
         "yearlyPrice": "$200"
       },
       "unlimited": {
-        "name": "White-Glove",
-        "description": "We build it for you",
-        "monthlyPrice": "$1500",
+        "name": "White-Glove Service",
+        "description": "The Total Solution",
+        "monthlyPrice": "$1500+",
         "yearlyPrice": "$1000+"
       }
     },
     "features": {
-      "siteLicense1": "Core Access Passes Plugin",
-      "siteLicense5": "All Plugin Features + n8n Pack",
-      "siteLicenseUnlimited": "Complete Done-For-You Setup",
-      "allFeatures": "Stackable Access Engine",
-      "yearUpdates": "3-Minute Importer Tool",
-      "prioritySupport": "Ready-to-use n8n Scenarios",
-      "accessGroups": "Upsell Email Automations",
-      "restApi": "Circle/Discord Integration",
-      "whiteLabel": "30 Days of Dedicated Support"
+      "siteLicense1": "Stack-First Architecture: Multiple purchases automatically extend access periods",
+      "siteLicense5": "Everything in Solo Plugin",
+      "siteLicenseUnlimited": "Everything in Automation Pro",
+      "allFeatures": "3-Minute Importer: Instantly migrate existing WooCommerce orders or CSV files",
+      "yearUpdates": "Flexible Access Groups: Bundle multiple products under shared timers",
+      "prioritySupport": "Guest-Friendly Flow: Automatic account creation for guest purchasers",
+      "accessGroups": "Pre-built n8n Scenarios: Ready-to-import workflows for your business logic",
+      "restApi": "Community Sync: Automated Discord/Circle member removal upon access expiration",
+      "whiteLabel": "Smart Upsell Triggers: Automated emails (MailerLite/Resend) sent before access ends",
+      "webhookSystem": "Webhook System: Full access to incoming and outgoing webhooks for custom integrations",
+      "technicalSetup": "Full Technical Setup: We install the plugin and set up your dedicated n8n server",
+      "customIntegration": "Custom Integration: We personally connect your mailing list, Discord, or Circle community",
+      "dedicatedSupport": "30 Days Dedicated Support: Full access to our team to ensure your launch is flawless",
+      "doneForYouMigration": "Done-For-You Migration: We handle your customer data import for you"
     }
   },
   "faq": {

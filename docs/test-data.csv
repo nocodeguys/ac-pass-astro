@@ -1,0 +1,11 @@
+User ID,Email,Name,Access Group ID,Access Group Name,Status,Expires At (ISO),Expires At (Readable),Days Remaining,Total Days Purchased
+4613,john.smith@icloud.com,John Smith,product_76,Infinite Access Pro,active,2027-01-15T14:49:48+00:00,2027-01-15 14:49,370,365
+313,yuki.tanaka@web.fr,Yuki Tanaka,product_76,Infinite Access Pro,active,2026-10-27T14:49:48+00:00,2026-10-27 14:49,290,365
+4266,elena.rossi@gmail.com,Elena Rossi,product_12,Global Explorer Pass,active,2026-01-23T14:49:48+00:00,2026-01-23 14:49,13,30
+3647,carlos.garcia@web.fr,Carlos Garcia,product_76,Infinite Access Pro,active,2026-08-26T14:49:48+00:00,2026-08-26 14:49,228,365
+4291,hans.mueller@outlook.com,Hans Mueller,product_12,Global Explorer Pass,active,2026-01-28T14:49:48+00:00,2026-01-28 14:49,18,30
+1254,fatima.al-sayed@gmail.com,Fatima Al-Sayed,product_12,Global Explorer Pass,active,2026-02-17T14:49:48+00:00,2026-02-17 14:49,38,30
+882,jean.dubois@gmail.com,Jean Dubois,product_12,Global Explorer Pass,active,2026-02-09T14:49:48+00:00,2026-02-09 14:49,30,30
+3015,li.wei@outlook.com,Wei Li,product_64,Business Scale Tier,active,2026-04-18T14:49:48+00:00,2026-04-18 14:49,98,90
+2947,arjun.singh@gmail.com,Arjun Singh,product_64,Business Scale Tier,active,2026-03-31T14:49:48+00:00,2026-03-31 14:49,80,90
+1104,olivia.brown@agency.it,Olivia Brown,product_76,Infinite Access Pro,active,2026-09-02T14:49:48+00:00,2026-09-02 14:49,235,365

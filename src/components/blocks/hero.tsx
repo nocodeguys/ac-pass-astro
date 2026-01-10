@@ -1,10 +1,4 @@
-import {
-  ArrowRight,
-  Clock,
-  Layers,
-  UserPlus,
-  Webhook,
-} from "lucide-react";
+import { ArrowRight, Clock, Layers, UserPlus, Webhook } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
@@ -105,7 +99,7 @@ export const Hero = ({ lang = "en" }: HeroProps) => {
       <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
         <div className="relative h-[793px] w-full">
           <img
-            src="/hero.webp"
+            src="/hero1.jpg"
             alt={t("hero.imageAlt")}
             className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />

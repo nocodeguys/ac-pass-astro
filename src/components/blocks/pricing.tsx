@@ -21,43 +21,40 @@ export const Pricing = ({ className, lang = "en" }: PricingProps) => {
   const plans = [
     {
       name: t("pricing.plans.singleSite.name"),
-      monthlyPrice: "$79",
-      yearlyPrice: "$49",
+      monthlyPrice: t("pricing.plans.singleSite.monthlyPrice"),
+      yearlyPrice: t("pricing.plans.singleSite.yearlyPrice"),
       description: t("pricing.plans.singleSite.description"),
       features: [
         t("pricing.features.siteLicense1"),
         t("pricing.features.allFeatures"),
         t("pricing.features.yearUpdates"),
         t("pricing.features.prioritySupport"),
-        t("pricing.features.accessGroups"),
-        t("pricing.features.restApi"),
       ],
     },
     {
       name: t("pricing.plans.fiveSites.name"),
-      monthlyPrice: "$149",
-      yearlyPrice: "$99",
+      monthlyPrice: t("pricing.plans.fiveSites.monthlyPrice"),
+      yearlyPrice: t("pricing.plans.fiveSites.yearlyPrice"),
+      description: t("pricing.plans.fiveSites.description"),
       features: [
         t("pricing.features.siteLicense5"),
-        t("pricing.features.allFeatures"),
-        t("pricing.features.yearUpdates"),
-        t("pricing.features.prioritySupport"),
         t("pricing.features.accessGroups"),
         t("pricing.features.restApi"),
+        t("pricing.features.whiteLabel"),
+        t("pricing.features.webhookSystem"),
       ],
     },
     {
       name: t("pricing.plans.unlimited.name"),
-      monthlyPrice: "$299",
-      yearlyPrice: "$199",
+      monthlyPrice: t("pricing.plans.unlimited.monthlyPrice"),
+      yearlyPrice: t("pricing.plans.unlimited.yearlyPrice"),
+      description: t("pricing.plans.unlimited.description"),
       features: [
         t("pricing.features.siteLicenseUnlimited"),
-        t("pricing.features.allFeatures"),
-        t("pricing.features.yearUpdates"),
-        t("pricing.features.prioritySupport"),
-        t("pricing.features.accessGroups"),
-        t("pricing.features.restApi"),
-        t("pricing.features.whiteLabel"),
+        t("pricing.features.technicalSetup"),
+        t("pricing.features.customIntegration"),
+        t("pricing.features.dedicatedSupport"),
+        t("pricing.features.doneForYouMigration"),
       ],
     },
   ];
@@ -98,20 +95,14 @@ export const Pricing = ({ className, lang = "en" }: PricingProps) => {
                   </div>
                 </div>
 
-                {plan.name === "Single Site" ? (
-                  <span className="text-muted-foreground text-sm">
-                    {plan.description}
-                  </span>
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <Switch
-                      checked={isAnnual}
-                      onCheckedChange={() => setIsAnnual(!isAnnual)}
-                      aria-label="Toggle annual billing"
-                    />
-                    <span className="text-sm font-medium">{t("pricing.launchPricing")}</span>
-                  </div>
-                )}
+                <div className="flex items-center gap-2">
+                  <Switch
+                    checked={isAnnual}
+                    onCheckedChange={() => setIsAnnual(!isAnnual)}
+                    aria-label="Toggle annual billing"
+                  />
+                  <span className="text-sm font-medium">{t("pricing.launchPricing")}</span>
+                </div>
 
                 <div className="space-y-3">
                   {plan.features.map((feature) => (
