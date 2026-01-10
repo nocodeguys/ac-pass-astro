@@ -1,9 +1,9 @@
 import {
   ArrowRight,
-  Blend,
-  ChartNoAxesColumn,
-  CircleDot,
-  Diamond,
+  Clock,
+  Layers,
+  UserPlus,
+  Webhook,
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -12,24 +12,24 @@ import { GITHUB_URL } from "@/consts";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
-    icon: CircleDot,
+    title: "Stackable Access",
+    description: "Multiple purchases automatically extend access periods. No overlapping subscriptions.",
+    icon: Layers,
   },
   {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
-    icon: Blend,
+    title: "Flexible Groups",
+    description: "Bundle products under shared access timers or use standalone products.",
+    icon: Clock,
   },
   {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
-    icon: Diamond,
+    title: "Guest-Friendly",
+    description: "Automatic account creation for guest purchasers with seamless access.",
+    icon: UserPlus,
   },
   {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
-    icon: ChartNoAxesColumn,
+    title: "Full API & Webhooks",
+    description: "RESTful API, incoming/outgoing webhooks, secure authentication.",
+    icon: Webhook,
   },
 ];
 
@@ -40,17 +40,16 @@ export const Hero = () => {
         {/* Left side - Main content */}
         <div className="flex-1">
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Astro template
+            Stackable Time-Based Access for WooCommerce
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Astro 5
+            Transform your WooCommerce store into a sophisticated access management system. No recurring billing, no complexity — just simple purchases that grant time.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href={GITHUB_URL}>Get template</a>
+              <a href={GITHUB_URL}>Get Access Passes</a>
             </Button>
             <Button
               variant="outline"
@@ -58,10 +57,10 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://shadcnblocks.com"
+                href="/docs"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Built by shadcnblocks.com
+                View Documentation
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
@@ -101,7 +100,7 @@ export const Hero = () => {
         <div className="relative h-[793px] w-full">
           <img
             src="/hero.webp"
-            alt="hero"
+            alt="WooCommerce Access Passes dashboard"
             className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />
         </div>

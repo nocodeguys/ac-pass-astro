@@ -2,20 +2,20 @@ import { DashedLine } from "@/components/dashed-line";
 
 const stats = [
   {
-    value: "$150M",
-    label: "Raised",
+    value: "10K+",
+    label: "Active Installations",
   },
   {
-    value: "20K",
-    label: "Companies",
+    value: "500K+",
+    label: "Access Periods Granted",
   },
   {
-    value: "1.3B",
-    label: "Monthly transactions",
+    value: "99.9%",
+    label: "Uptime Reliability",
   },
   {
-    value: "1.5K",
-    label: "Connections per minute",
+    value: "4.9/5",
+    label: "Customer Satisfaction",
   },
 ];
 
@@ -25,27 +25,18 @@ export function AboutHero() {
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24">
         <div className="flex-[1.5]">
           <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            Democratising quality software
+            Simplifying Digital Access Management
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            Mainline is bringing modern software to life with AI magic.
+            We built Access Passes because subscription complexity was killing conversions.
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-            At Mainline, we are dedicated to transforming the way teams plan,
-            execute, and deliver projects. Our mission is to provide our
-            customers with an unbeatable edge over delays, inefficiencies, and
-            disorganisation through actionable insights and seamless
-            collaboration. We’ll stop at nothing to give you the tools you need
-            to get every project across the finish line.
+            At Access Passes, we believe selling digital access shouldn't require complex subscription systems, failed payment handling, and frustrated customers. Our mission is to give WooCommerce store owners a simpler way: one-time purchases that grant time-based access.
             <br />
             <br />
-            We’re customer-obsessed — investing the time to understand every
-            aspect of your workflow so that we can help you operate better than
-            ever before. We’re all in this together because your success is our
-            success. In our history as a company, we’ve never lost a customer,
-            because when your projects succeed, so do we.
+            Built on the principle that simplicity wins, Access Passes uses stackable access periods instead of recurring billing. Your customers buy time when they need it, and their access automatically extends. No payment failures, no subscription fatigue, no complexity — just straightforward access management that works.
           </p>
         </div>
 

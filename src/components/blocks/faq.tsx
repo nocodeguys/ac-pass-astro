@@ -8,52 +8,57 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "Getting Started",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "What are the requirements to run Access Passes?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Access Passes requires WordPress 5.0 or higher, WooCommerce 3.0 or higher, and PHP 7.4 or higher. You'll also need a valid license key which you receive upon purchase.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "How do I install and set up the plugin?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Installation is simple: upload and activate the plugin, run the onboarding wizard, configure your first access group, set up products with access days, and start selling. The guided wizard walks you through each step.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Do my customers need accounts to purchase?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "No! Access Passes supports guest-friendly checkout with automatic account creation. When a guest makes a purchase, an account is automatically created for them with seamless access to their purchases.",
       },
     ],
   },
   {
-    title: "Your account",
+    title: "Features",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "How does access stacking work?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "When a customer purchases a product that grants access time, it automatically stacks with any existing access. For example, if they have 30 days remaining and purchase another 30-day product, they'll have 60 days total. No overlapping subscriptions or payment failures.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "What are Access Groups and how do they work?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Access Groups let you bundle multiple products under shared access timers. Products in the same group contribute to a cumulative access period. This is perfect for course bundles, tiered content, or related digital products.",
+      },
+      {
+        question: "Can I use webhooks to integrate with other systems?",
+        answer:
+          "Yes! Access Passes includes a powerful webhook system with both outgoing webhooks for access changes and incoming webhook processing for external integrations. All webhooks use secure API key authentication with configurable SSL verification.",
       },
     ],
   },
   {
-    title: "Other questions",
+    title: "Technical",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Is there an API for developers?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Absolutely. Access Passes provides a full REST API with endpoints for user status, group management, bulk operations, and email-based user lookup. It follows WordPress and WooCommerce best practices with capability-based access control.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "How are refunds handled?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Access Passes automatically handles refunds by revoking the appropriate amount of access time. When an order is refunded, the access days granted by that order are subtracted from the user's remaining time.",
       },
     ],
   },

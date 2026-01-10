@@ -5,7 +5,7 @@ import { GITHUB_URL } from "@/consts";
 
 export function Footer() {
   const navigation = [
-    { name: "Product", href: "/#feature-modern-teams" },
+    { name: "Features", href: "/#feature-modern-teams" },
     { name: "About Us", href: "/about" },
     { name: "Pricing", href: "/pricing" },
     { name: "FAQ", href: "/faq" },
@@ -13,8 +13,8 @@ export function Footer() {
   ];
 
   const social = [
-    { name: "Xwitter", href: "https://x.com/ausrobdev" },
-    { name: "LinkedIn", href: "#" },
+    { name: "Twitter", href: "https://x.com/accesspasses" },
+    { name: "Support", href: "/contact" },
   ];
 
   const legal = [{ name: "Privacy Policy", href: "/privacy" }];
@@ -23,15 +23,14 @@ export function Footer() {
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
       <div className="container space-y-3 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-          Start your free trial today
+          Ready to simplify access management?
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Mainline is the fit-for-purpose tool for planning and building modern
-          software products.
+          Transform your WooCommerce store with stackable time-based access. No recurring billing complexity — just simple purchases that grant time.
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <a href={GITHUB_URL}>Get template</a>
+            <a href={GITHUB_URL}>Get Access Passes</a>
           </Button>
         </div>
       </div>

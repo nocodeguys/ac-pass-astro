@@ -4,13 +4,13 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "Comprehensive Admin Dashboard.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "Intuitive user access overview with real-time status monitoring and detailed history tracking.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
-        alt: "Issue template interface",
+        alt: "Admin dashboard interface",
         width: 495,
         height: 186,
       },
@@ -20,8 +20,8 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Seamless WooCommerce Integration.",
+    description: "Works with your existing products. No external systems or complex setup needed.",
     images: [
       { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
@@ -60,13 +60,13 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "Smart Order Processing.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "Automatic access on payment success, smart refund handling, and failed payment protection.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
-        alt: "Graveyard interface",
+        alt: "Order processing interface",
         width: 305,
         height: 280,
       },
@@ -76,13 +76,13 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "User-Friendly Frontend.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Clean My Account integration with access status, expiration dates, and mobile-responsive design.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
-        alt: "Task discussions interface",
+        alt: "My Account integration",
         width: 320,
         height: 103,
       },
@@ -92,13 +92,13 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "Webhook System.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Outgoing webhooks for access changes, incoming webhooks for integrations, API key authentication.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
-        alt: "Notifications interface",
+        alt: "Webhook configuration",
         width: 305,
         height: 280,
       },
@@ -117,7 +117,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          Everything you need to manage time-based access
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">

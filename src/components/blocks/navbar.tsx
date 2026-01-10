@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight, ShoppingCart } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -21,15 +21,15 @@ const ITEMS = [
     href: "#features",
     dropdownItems: [
       {
-        title: "Modern product teams",
+        title: "Stack-First Architecture",
         href: "/#feature-modern-teams",
         description:
-          "Mainline is built on the habits that make the best product teams successful",
+          "Multiple purchases automatically extend access periods with no overlapping subscriptions",
       },
       {
-        title: "Resource Allocation",
+        title: "Access Management",
         href: "/#resource-allocation",
-        description: "Mainline your resource allocation and execution",
+        description: "Everything you need to manage time-based access for your products",
       },
     ],
   },
@@ -59,7 +59,7 @@ export const Navbar = () => {
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img
             src="/logo.svg"
-            alt="logo"
+            alt="Access Passes"
             width={94}
             height={18}
             className="dark:invert"
@@ -126,8 +126,8 @@ export const Navbar = () => {
             href={GITHUB_URL}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
+            <ShoppingCart className="size-4" />
+            <span className="sr-only">Get Access Passes</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}

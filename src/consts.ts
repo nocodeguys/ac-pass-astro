@@ -1,38 +1,37 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Mainline - Modern Astro Template";
+export const SITE_TITLE = "WooCommerce Access Passes - Time-Based Access Management";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "Transform your WooCommerce store into a sophisticated time-based access management system. Stackable access periods, flexible groups, and no recurring billing complexity.";
 
-export const GITHUB_URL =
-  "https://github.com/shadcnblocks/mainline-astro-template";
+export const GITHUB_URL = "https://accesspasses.com/get";
 
 export const SITE_METADATA = {
   title: {
-    default: "Mainline - Modern Astro Template",
-    template: "%s | Mainline",
+    default: "WooCommerce Access Passes - Time-Based Access Management",
+    template: "%s | Access Passes",
   },
   description:
-    "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Stackable time-based access for WooCommerce. Simple purchases that grant time. Perfect for courses, memberships, and digital products.",
   keywords: [
-    "Astro",
-    "astro template",
-    "astro theme",
-    "astro starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "WooCommerce",
+    "WooCommerce plugin",
+    "WordPress plugin",
+    "access management",
+    "time-based access",
+    "digital products",
+    "membership plugin",
+    "course access",
+    "stackable subscriptions",
+    "access passes",
+    "WooCommerce membership",
+    "digital access",
+    "subscription alternative",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "Access Passes" }],
+  creator: "Access Passes",
+  publisher: "Access Passes",
   robots: {
     index: true,
     follow: true,
@@ -49,25 +48,25 @@ export const SITE_METADATA = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Astro Template",
+    title: "WooCommerce Access Passes - Time-Based Access Management",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "Stackable time-based access for WooCommerce. Simple purchases that grant time. Perfect for courses, memberships, and digital products.",
+    siteName: "Access Passes",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Astro Template",
+        alt: "WooCommerce Access Passes - Time-Based Access Management",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Astro Template",
+    title: "WooCommerce Access Passes - Time-Based Access Management",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Stackable time-based access for WooCommerce. Simple purchases that grant time. Perfect for courses, memberships, and digital products.",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
+    creator: "@accesspasses",
   },
 };

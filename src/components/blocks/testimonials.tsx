@@ -15,59 +15,59 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "Finally, a way to sell course access without subscription headaches. My students love stacking extra time when they need it.",
+    author: "Sarah Mitchell",
+    role: "Course Creator",
+    company: "Digital Learning Academy",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "Access Passes handles our license management perfectly. Customers buy time, it stacks, no failed renewals to chase.",
+    author: "Marcus Chen",
+    role: "Lead Developer",
+    company: "SoftwareCraft Studio",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "We switched from a complex subscription plugin. Access Passes is so much simpler — and our members actually prefer it.",
+    author: "Emily Rodriguez",
+    role: "Community Manager",
+    company: "Creator's Guild",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "The guest checkout with automatic account creation is a game-changer for conversions. Setup took 15 minutes.",
+    author: "David Park",
+    role: "Store Owner",
+    company: "Digital Downloads Hub",
     image: "/testimonials/kundo-marta.webp",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "Our course completion rates went up 40% after switching to Access Passes. Students feel less pressure with stackable time.",
+    author: "Lisa Thompson",
+    role: "Education Director",
+    company: "SkillPath Online",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "The webhook integration let us sync access with our custom member portal. The API documentation is excellent.",
+    author: "James Wilson",
+    role: "Technical Lead",
+    company: "MemberStack Pro",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
+    quote: "No more chasing failed payments or managing complex subscription tiers. Access Passes just works.",
+    author: "Anna Martinez",
     role: "Founder",
-    company: "Mercury Finance",
+    company: "Premium Content Co",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "The admin dashboard gives us complete visibility into who has access and when it expires. Customer support loves it.",
+    author: "Michael Brown",
+    role: "Operations Manager",
+    company: "LearnFlow Academy",
     image: "/testimonials/kundo-marta.webp",
   },
 ];
@@ -85,15 +85,13 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              Loved by WooCommerce store owners
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+              Store owners choose Access Passes for its simplicity, flexibility, and reliable time-based access management.
             </p>
             <Button variant="outline" className="shadow-md">
-              Read our Customer Stories <ArrowRight className="size-4" />
+              Read Customer Stories <ArrowRight className="size-4" />
             </Button>
           </div>
 
