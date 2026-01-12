@@ -37,6 +37,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Konfus";
+  src: url("/fonts/Konfus-Regular.woff") format("woff"),
+       url("/fonts/Konfus-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -89,6 +98,7 @@
 
   --font-dm-sans: "DM Sans", sans-serif;
   --font-inter: "inter", sans-serif;
+  --font-konfus: "Konfus", sans-serif;
 
   --font-sans:
     var(--font-dm-sans), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -98,9 +108,9 @@
     "Courier New", monospace;
 
   /* StyleGlide provides a better abstraction for fonts */
-  --display-family: var(--font-sans);
+  --display-family: var(--font-konfus);
   --text-family: var(--font-inter);
-  --display-weight: 600;
+  --display-weight: 400;
   --text-weight: 400;
 }
 
@@ -246,25 +256,13 @@
   }
   h1,
   h2,
+  h3,
+  h4,
+  h5,
+  h6,
   .font-display {
     font-family: var(--font-display);
     font-weight: var(--display-weight);
-    -webkit-font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on;
-    -moz-font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on;
-    -ms-font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on;
-    font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
   }
   .font-mono {
     font-family: var(--font-mono), monospace;

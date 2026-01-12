@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Layers, UserPlus, Webhook } from "lucide-react";
+import { Clock, Layers, UserPlus, Webhook } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
@@ -39,36 +39,26 @@ export const Hero = ({ lang = "en" }: HeroProps) => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
+          <h1 className="font-display text-foreground max-w-160 text-[32px] leading-tight tracking-tight md:text-[32px] lg:text-[32px] lg:leading-tight">
             {t("hero.title")}
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
+          <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-relaxed md:text-lg md:leading-relaxed">
             {t("hero.description")}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild>
+            <Button asChild size="lg" className="text-base">
               <a href={GITHUB_URL}>{t("hero.cta")}</a>
             </Button>
-            <Button
-              variant="outline"
-              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
-              asChild
-            >
-              <a
-                href={getLocalizedPath("/docs", lang)}
-                className="max-w-56 truncate text-start md:max-w-none"
-              >
-                {t("hero.viewDocs")}
-                <ArrowRight className="stroke-3" />
-              </a>
+            <Button variant="ghost" size="lg" className="text-base" asChild>
+              <a href={getLocalizedPath("/docs", lang)}>{t("hero.viewDocs")}</a>
             </Button>
           </div>
         </div>
 
         {/* Right side - Features */}
-        <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
+        <div className="relative flex flex-1 flex-col justify-center space-y-6 max-lg:pt-10 lg:pl-10">
           <DashedLine
             orientation="vertical"
             className="absolute top-0 left-0 max-lg:hidden"
@@ -80,13 +70,18 @@ export const Hero = ({ lang = "en" }: HeroProps) => {
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="flex gap-2.5 lg:gap-5">
-                <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" />
-                <div>
-                  <h2 className="font-text text-foreground font-semibold">
+              <div
+                key={feature.title}
+                className="hover:border-border hover:bg-card flex gap-3 rounded-xl border border-transparent p-2 transition-all duration-300 hover:shadow-sm lg:gap-4"
+              >
+                <div className="bg-muted flex size-9 shrink-0 items-center justify-center rounded-full lg:size-10">
+                  <Icon className="text-foreground size-4 lg:size-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-foreground mb-1 text-base font-semibold lg:text-lg">
                     {feature.title}
-                  </h2>
-                  <p className="text-muted-foreground max-w-76 text-sm">
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
